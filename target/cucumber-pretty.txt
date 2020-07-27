@@ -1,0 +1,27 @@
+@tag
+Feature: User Test the Login Functionality
+
+  @tag1
+  Scenario: User Login the Jpet Application         # LoginPage.feature:5
+    Given User launch the Pet Application           # StepDefinition.user_launch_the_Pet_Application()
+    When User registered the details and login      # StepDefinition.user_registered_the_details_and_login()
+    And User Search and add the product to the cart # StepDefinition.user_Search_and_add_the_product_to_the_cart()
+    Then User place the order                       # StepDefinition.user_place_the_order()
+
+  @tag2
+  Scenario: User purchasing the pet in Jpet Application            # LoginPage.feature:12
+    Given Customer launching the JPet Application                  # StepDefinition.customer_launching_the_JPet_Application()
+    When Customer registered the details and login the application # StepDefinition.customer_registered_the_details_and_login_the_application()
+    And Customer Search the pet and added to the Cart              # StepDefinition.customer_Search_the_pet_and_added_to_the_Cart()
+      java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+      	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+      	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+      	at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)
+      	at org.resources.BaseClass.type(BaseClass.java:137)
+      	at org.stepdefinition.StepDefinition.customer_Search_the_pet_and_added_to_the_Cart(StepDefinition.java:141)
+      	at ✽.And Customer Search the pet and added to the Cart(LoginPage.feature:15)
+
+    Then Customer place the order                                  # StepDefinition.customer_place_the_order()

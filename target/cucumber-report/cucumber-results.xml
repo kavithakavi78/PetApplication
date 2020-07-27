@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="108.32602">
+<testcase classname="User Test the Login Functionality" name="User Login the Jpet Application" time="85.870757">
+<system-out><![CDATA[Given User launch the Pet Application.......................................passed
+When User registered the details and login..................................passed
+And User Search and add the product to the cart.............................passed
+Then User place the order...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Test the Login Functionality" name="User purchasing the pet in Jpet Application" time="22.455263">
+<failure message="java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;&#10;&#9;at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)&#13;&#10;&#9;at org.resources.BaseClass.type(BaseClass.java:137)&#13;&#10;&#9;at org.stepdefinition.StepDefinition.customer_Search_the_pet_and_added_to_the_Cart(StepDefinition.java:141)&#13;&#10;&#9;at ✽.And Customer Search the pet and added to the Cart(LoginPage.feature:15)&#13;&#10;"><![CDATA[Given Customer launching the JPet Application...............................passed
+When Customer registered the details and login the application..............passed
+And Customer Search the pet and added to the Cart...........................failed
+Then Customer place the order...............................................skipped
+
+StackTrace:
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)
+	at org.resources.BaseClass.type(BaseClass.java:137)
+	at org.stepdefinition.StepDefinition.customer_Search_the_pet_and_added_to_the_Cart(StepDefinition.java:141)
+	at ✽.And Customer Search the pet and added to the Cart(LoginPage.feature:15)
+]]></failure>
+</testcase>
+</testsuite>
